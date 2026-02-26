@@ -1,0 +1,77 @@
+
+.resources-hero {
+  background: linear-gradient(to bottom right, #4f46e5, #9333ea, #ec4899);
+}
+
+
+.resources-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.resource-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.resource-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-0.5rem);
+}
+
+.resource-list {
+  margin-top: 0.5rem;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.resource-list li::marker {
+  color: #9333ea;
+}
+
+
+.resources-cta {
+  background: linear-gradient(to right, #4f46e5, #9333ea);
+}
+
+
+.resources-cta .btn-cta {
+  background-color: white;
+  color: #4f46e5;
+  font-size: 1.125rem;
+  padding: 1rem 2.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.resources-cta .btn-cta:hover {
+  background-color: #eef2ff;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+  .resource-card {
+    padding: 1.25rem;
+  }
+
+  .resource-list {
+    font-size: 0.8rem;
+  }
+
+  .resources-cta .btn-cta {
+    width: 100%;
+  }
+}
