@@ -324,7 +324,7 @@ export default function Academy() {
   const navigate = useNavigate();
   const [currentTab, setCurrentTab] = useState("todo");
   const [modalOpen, setModalOpen] = useState(false);
-  const [modalKind, setModalKind] = useState("content"); // content | article
+  const [modalKind, setModalKind] = useState("content"); 
   const [selectedContent, setSelectedContent] = useState(null);
   const [selectedArticle, setSelectedArticle] = useState(null);
 
@@ -533,7 +533,9 @@ export default function Academy() {
         {currentTab === "todo" && (
           <div id="section-featured">
             <div className="section-header">
-              <p className="section-label">// Empieza aquí</p>
+<p className="section-label">
+  {"//"} Empieza aquí
+</p>
               <h2 className="section-title">
                 Lecciones <em>más populares</em>
               </h2>
@@ -678,7 +680,9 @@ export default function Academy() {
         {currentTab !== "todo" && (
           <div id="lessons-section">
             <div className="section-header">
-              <p className="section-label">// {lessonsForTab.length} lecciones disponibles</p>
+<p className="section-label">
+  {"//"} {lessonsForTab.length} lecciones disponibles
+</p>
               <h2 className="section-title">
                 Aprende a tu <em>propio ritmo</em>
               </h2>
@@ -708,11 +712,12 @@ export default function Academy() {
             </div>
           </div>
         )}
-
-
+        
         <div id="section-articles">
           <div className="section-header">
-            <p className="section-label">// Guías paso a paso</p>
+<div className="section-label">
+  {"//"} Guías paso a paso
+</div>
             <h2 className="section-title">
               Lee a tu <em>propio ritmo</em>
             </h2>
@@ -752,7 +757,7 @@ export default function Academy() {
       <div
         className={`overlay ${modalOpen ? "open" : ""}`}
         onClick={(e) => {
-          // click fuera del modal
+     
           if (e.target.classList.contains("overlay")) closeModal();
         }}
       >

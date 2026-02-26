@@ -225,7 +225,9 @@ export default function ActivaLanding() {
       <section className="section" id="problema">
         <div className="problem-grid">
           <div className="problem-text reveal">
-            <div className="section-label">// El problema real</div>
+<div className="section-label">
+  {"//"} El problema real
+</div>
             <h2 className="section-title">
               El sistema tiene un<br /><em>bug estructural.</em>
             </h2>
@@ -267,7 +269,9 @@ export default function ActivaLanding() {
       <section className="section" id="score">
         <div className="score-section">
           <div className="score-header reveal">
-            <div className="section-label">// Herramienta exclusiva</div>
+<div className="section-label">
+  {"//"} Herramienta exclusiva para profesionales 50+
+</div>
             <h2 className="section-title">
               Calcula tu<br /><em>Score Plateado</em>
             </h2>

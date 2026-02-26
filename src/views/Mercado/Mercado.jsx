@@ -125,9 +125,9 @@ export default function Mercado() {
         <div className="header-grid"></div>
 
         <div className="header-content">
-    <p className="eyebrow">
-  <span className="eyebrow-slash">//</span> Mercado de Problemas · En vivo
-   </p>
+<p className="eyebrow">
+  {"//"} Mercado de Problemas · En vivo
+</p>
           <h1 className="h-title">
             Empresas con problemas<br />
             <em>reales esperando tu experiencia.</em>
