@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import "./mercado.css";
 
 const PROBLEMS = [
-  // =========================
-  // PROFESIONALES (ORIGINALES)
-  // =========================
+
   { id: 1, cat: "finanzas", catLabel: "Finanzas", city: "Arequipa", title: "Restructurar deuda con proveedores sin afectar el flujo de caja operativo", desc: "Empresa de distribución regional con S/. 2.3M en deuda acumulada con 4 proveedores principales busca experto que diseñe plan de restructuración sin paralizar operaciones.", budget: 4800, weeks: 4, scoreMin: 820, applicants: 7, maxApplicants: 10, daysLeft: 5, tags: ["Restructuración", "Flujo de caja", "Negociación"], urgent: true },
   { id: 2, cat: "manufactura", catLabel: "Manufactura", city: "Lima", title: "Reducir mermas en línea de producción textil en 30 días con presupuesto limitado", desc: "Planta textil mediana con 120 operarios busca especialista en procesos para identificar y corregir puntos de desperdicio sin inversión en maquinaria nueva.", budget: 2500, weeks: 3, scoreMin: 750, applicants: 3, maxApplicants: 10, daysLeft: 8, tags: ["Lean", "Producción", "Eficiencia"], urgent: false },
   { id: 3, cat: "estrategia", catLabel: "Estrategia", city: "Trujillo", title: "Diseñar plan de expansión a mercado colombiano para empresa de alimentos regional", desc: "Empresa de alimentos del norte del Perú con 18 años en el mercado local quiere iniciar exportaciones a Colombia. Busca experto con experiencia en internacionalización.", budget: 8200, weeks: 6, scoreMin: 880, applicants: 12, maxApplicants: 15, daysLeft: 3, tags: ["Internacionalización", "Alimentos", "Go-to-market"], urgent: true },
@@ -15,9 +13,6 @@ const PROBLEMS = [
   { id: 7, cat: "manufactura", catLabel: "Manufactura", city: "Piura", title: "Optimizar cadena de suministro para reducir tiempos de entrega en 40% en sector agroindustrial", desc: "Empresa agroexportadora con operaciones en Piura busca especialista en logística y cadena de suministro para rediseñar flujo desde campo hasta puerto de embarque.", budget: 7200, weeks: 7, scoreMin: 840, applicants: 4, maxApplicants: 12, daysLeft: 9, tags: ["Logística", "Agroexportación", "Supply chain"], urgent: false },
   { id: 8, cat: "retail", catLabel: "Marketing", city: "Lima", title: "Relanzar marca de 20 años sin perder base de clientes leales mientras atrae segmento joven", desc: "Marca de ropa peruana reconocida en segmento 45+ quiere modernizar imagen sin alejar a sus clientes actuales. Reto de rebranding intergeneracional.", budget: 4200, weeks: 5, scoreMin: 800, applicants: 6, maxApplicants: 10, daysLeft: 7, tags: ["Branding", "Reposicionamiento", "Marketing"], urgent: false },
 
-  // =========================
-  // NUEVO: HABILIDADES / OFICIOS
-  // =========================
   { id: 9, cat: "oficios", catLabel: "Carpintería", city: "Lima", title: "Fabricación e instalación de muebles a medida para oficina", desc: "Startup necesita carpintero para diseñar e instalar escritorios y estanterías resistentes para equipo de 12 personas.", budget: 1800, weeks: 2, scoreMin: 600, applicants: 2, maxApplicants: 6, daysLeft: 6, tags: ["Carpintería", "Muebles", "Instalación"], urgent: false },
   { id: 10, cat: "oficios", catLabel: "Plomería", city: "Arequipa", title: "Reparación de filtración y cambio de tubería en baño principal", desc: "Vivienda con filtración recurrente necesita diagnóstico y reemplazo de tramo de tubería. Trabajo con garantía.", budget: 950, weeks: 1, scoreMin: 580, applicants: 3, maxApplicants: 6, daysLeft: 3, tags: ["Plomería", "Reparación", "Tuberías"], urgent: true },
   { id: 11, cat: "oficios", catLabel: "Electricidad", city: "Cusco", title: "Instalación de tablero eléctrico y reordenamiento de cableado en local", desc: "Local comercial requiere instalación segura, ordenada y con verificación de puntos críticos de energía.", budget: 1400, weeks: 1, scoreMin: 600, applicants: 4, maxApplicants: 8, daysLeft: 5, tags: ["Electricidad", "Instalación", "Seguridad"], urgent: false },
@@ -124,7 +119,7 @@ export default function Mercado() {
         </div>
       </nav>
 
-      {/* HEADER */}
+
       <header className="header">
         <div className="header-bg"></div>
         <div className="header-grid"></div>
@@ -159,7 +154,6 @@ export default function Mercado() {
         </div>
       </header>
 
-      {/* TOOLBAR */}
       <div className="toolbar">
         <div className="search-wrap">
           <span className="search-icon">⌕</span>
@@ -188,7 +182,7 @@ export default function Mercado() {
             { key: "manufactura", label: "Manufactura" },
             { key: "retail", label: "Retail" },
             { key: "estrategia", label: "Estrategia" },
-            { key: "oficios", label: "Habilidades" }, // ✅ NUEVA PESTAÑA
+            { key: "oficios", label: "Habilidades" }, 
           ].map((f) => (
             <button
               key={f.key}
@@ -209,7 +203,7 @@ export default function Mercado() {
         </select>
       </div>
 
-      {/* GRID */}
+
       <main className="main">
         <p className="results-count" id="results-count">
           {filtered.length} resultado{filtered.length !== 1 ? "s" : ""}
@@ -299,10 +293,10 @@ export default function Mercado() {
         </div>
       </main>
 
-      {/* OVERLAY */}
+
       <div className={`overlay ${overlayOpen ? "open" : ""}`} id="overlay" onClick={closeDrawer} />
 
-      {/* DRAWER */}
+
       <aside className={`drawer ${drawerOpen ? "open" : ""}`} id="drawer">
         <button className="drawer-close" onClick={closeDrawer} type="button">
           ✕

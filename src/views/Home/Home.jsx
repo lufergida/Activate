@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import "./home.css";
 
 export default function ActivaLanding() {
-  // ----- STATES -----
+
   const [panel, setPanel] = useState(0);
   const [selectedSegmento, setSelectedSegmento] = useState("profesional");
 
@@ -319,7 +319,7 @@ export default function ActivaLanding() {
                 </div>
               </div>
 
-              {/* Panel 1 */}
+
               <div className={`sim-panel ${panel === 1 ? "active" : ""}`}>
                 <p className="sim-question">¿Cuántos años lleva trabajando en esa industria?</p>
                 <div className="slider-container">
@@ -358,7 +358,6 @@ export default function ActivaLanding() {
                 </div>
               </div>
 
-              {/* Panel 2 */}
               <div className={`sim-panel ${panel === 2 ? "active" : ""}`}>
                 <p className="sim-question">
                   ¿Ha resuelto alguna <em>crisis empresarial mayor</em> en su carrera?
@@ -397,7 +396,7 @@ export default function ActivaLanding() {
                 </div>
               </div>
 
-              {/* Panel 3 */}
+
               <div className={`sim-panel ${panel === 3 ? "active" : ""}`}>
                 <div className="score-result">
                   <div className="score-ring-container">
@@ -457,7 +456,7 @@ export default function ActivaLanding() {
 
       <div className="divider" />
 
-      {/* WAITLIST */}
+
       <section className="section waitlist-section" id="waitlist" ref={waitlistRef}>
         <div className="waitlist-inner">
           <div className="waitlist-badge reveal">🟡 &nbsp; Lanzamiento Q2 2026 · Perú</div>
@@ -583,14 +582,13 @@ export default function ActivaLanding() {
         </div>
       </section>
 
-      {/* FOOTER */}
+
       <footer>
         <div className="footer-logo">ACTIVA<span>PERÚ</span></div>
         <p className="footer-text">© 2026 · Hackatón Plateada 50+ · Emprende UP × BID Lab</p>
         <div className="footer-badge">MVP v0.1 · En construcción</div>
       </footer>
 
-      {/* MODAL */}
       <div
         className={`modal-overlay ${modalOpen ? "open" : ""}`}
         id="modal"

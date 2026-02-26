@@ -27,7 +27,7 @@ const IMGS = {
 };
 
 const CONTENT = [
-  // WHATSAPP
+
   {
     id: 1,
     type: "leccion",
@@ -95,7 +95,6 @@ const CONTENT = [
     ],
   },
 
-  // INSTAGRAM
   {
     id: 4,
     type: "leccion",
@@ -435,7 +434,7 @@ export default function Academy() {
         <div className="nav-badge">GRATUITO · 50+</div>
       </nav>
 
-   {/* HERO */}
+
 <section className="hero">
   <div className="hero-bg"></div>
   <div className="hero-grid"></div>
@@ -443,7 +442,6 @@ export default function Academy() {
   <div className="hero-container">
     <div className="hero-inner">
 
-      {/* IZQUIERDA */}
       <div className="hero-left">
         <div className="eyebrow">Academia Digital Plateada</div>
 
@@ -476,7 +474,7 @@ export default function Academy() {
         </button>
       </div>
 
-      {/* DERECHA - BLOQUE AISLADO */}
+
       <div className="hero-right-wrapper">
         <div className="hero-right">
 
@@ -514,7 +512,7 @@ export default function Academy() {
   </div>
 </section>
 
-      {/* TABS */}
+
       <div className="tabs-wrap">
         <div className="tabs">
           {tabs.map((t) => (
@@ -533,9 +531,8 @@ export default function Academy() {
         </div>
       </div>
 
-      {/* MAIN */}
       <main className="main" id="academy-content">
-        {/* FEATURED (solo en "todo") */}
+
         {currentTab === "todo" && (
           <div id="section-featured">
             <div className="section-header">
@@ -607,7 +604,7 @@ export default function Academy() {
           </div>
         )}
 
-        {/* MODULES (oculto en guías) */}
+
         {currentTab !== "guias" && (
           <div className="modules-section" id="section-modules">
             <div className="modules-label">Aprende por plataforma</div>
@@ -645,7 +642,7 @@ export default function Academy() {
           </div>
         )}
 
-        {/* TIPS (solo en todo) */}
+
         {currentTab === "todo" && (
           <div className="tips-banner">
             <div>
@@ -680,7 +677,7 @@ export default function Academy() {
           </div>
         )}
 
-        {/* LESSONS GRID (cuando no es todo) */}
+
         {currentTab !== "todo" && (
           <div id="lessons-section">
             <div className="section-header">
@@ -715,7 +712,7 @@ export default function Academy() {
           </div>
         )}
 
-        {/* ARTICLES */}
+
         <div id="section-articles">
           <div className="section-header">
             <p className="section-label">// Guías paso a paso</p>
@@ -754,7 +751,7 @@ export default function Academy() {
         </div>
       </main>
 
-      {/* OVERLAY + MODAL */}
+
       <div
         className={`overlay ${modalOpen ? "open" : ""}`}
         onClick={(e) => {
@@ -777,7 +774,7 @@ export default function Academy() {
         </div>
       </div>
 
-      {/* FOOTER */}
+
       <footer>
         <div className="footer-logo">
           ACTIVA<span>PERÚ</span>
@@ -791,7 +788,7 @@ export default function Academy() {
   );
 }
 
-/* -------------------- Subcomponentes -------------------- */
+
 
 function Thumb({ content, tall = false, compact = false }) {
   const pad = compact ? "58%" : tall ? "45%" : "56.25%";
