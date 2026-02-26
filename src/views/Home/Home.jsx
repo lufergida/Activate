@@ -36,7 +36,7 @@ export default function ActivaLanding() {
   const waitlistRef = useRef(null);
   const navigate = useNavigate();
 
-  // ----- HELPERS -----
+
   const scrollToWaitlist = () => {
     waitlistRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -116,7 +116,7 @@ export default function ActivaLanding() {
     setWaitlistCount((c) => c + 1);
   };
 
-  // ----- Reveal animation -----
+
   useEffect(() => {
     const els = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver(
@@ -132,13 +132,13 @@ export default function ActivaLanding() {
     return () => observer.disconnect();
   }, []);
 
-  // ----- Ring offset -----
+
   const circumference = 502;
   const ringOffset = circumference - (score / 1000) * circumference;
 
   return (
     <>
-      {/* NAV */}
+
       <nav>
         <div className="nav-logo">
           ACTIVA<span>PERÚ</span>
@@ -167,7 +167,7 @@ export default function ActivaLanding() {
         </button>
       </nav>
 
-      {/* HERO */}
+
       <section className="hero">
         <div className="hero-bg" />
         <div className="hero-grid" />
@@ -192,7 +192,7 @@ export default function ActivaLanding() {
               Calcular mi Score Plateado
             </a>
 
-            {/* ✅ Botón Mercado navega a /mercado */}
+
             <button
               type="button"
               className="btn-secondary"
@@ -221,7 +221,7 @@ export default function ActivaLanding() {
 
       <div className="divider" />
 
-      {/* PROBLEMA */}
+
       <section className="section" id="problema">
         <div className="problem-grid">
           <div className="problem-text reveal">
@@ -263,7 +263,7 @@ export default function ActivaLanding() {
 
       <div className="divider" />
 
-      {/* SCORE */}
+
       <section className="section" id="score">
         <div className="score-section">
           <div className="score-header reveal">
@@ -289,7 +289,7 @@ export default function ActivaLanding() {
             </div>
 
             <div className="sim-body">
-              {/* Panel 0 */}
+
               <div className={`sim-panel ${panel === 0 ? "active" : ""}`}>
                 <p className="sim-question">
                   ¿En qué industria tienes tu mayor <em>profundidad de experiencia?</em>

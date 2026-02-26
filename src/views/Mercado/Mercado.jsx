@@ -58,7 +58,7 @@ export default function Mercado() {
         if (currentSort === "budget") return b.budget - a.budget;
         if (currentSort === "urgent") return a.daysLeft - b.daysLeft;
         if (currentSort === "score") return a.scoreMin - b.scoreMin;
-        return a.id - b.id; // "Más recientes" según id
+        return a.id - b.id; 
       });
   }, [currentFilter, currentSearch, currentSort]);
 
@@ -103,7 +103,7 @@ export default function Mercado() {
 
   return (
     <>
-      {/* NAV */}
+
       <nav className="nav">
         <Link className="nav-back" to="/">← Volver al inicio</Link>
 

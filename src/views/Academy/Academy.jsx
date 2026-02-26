@@ -186,7 +186,6 @@ const CONTENT = [
     ],
   },
 
-  // TIKTOK
   {
     id: 8,
     type: "leccion",
@@ -406,14 +405,12 @@ export default function Academy() {
     document.body.style.overflow = "";
   };
 
-  // Cerrar con ESC
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === "Escape" && modalOpen) closeModal();
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [modalOpen]);
 
   const scrollToContent = () => {
